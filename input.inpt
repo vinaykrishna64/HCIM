@@ -1,0 +1,87 @@
+$-----------------------------------------
+$   input file for SWIC
+$ '$' in the front of the line for commments
+$ this file must be named input.inpt
+$-------------------------------------------
+$
+mode 1D
+$
+$
+wave 0.5 10
+$
+$
+cgrid 1500 0.2 0 
+$
+$
+bottom MATLAB_GENERATED.csv C X.csv 
+$
+$
+sim_time 1200 0.7 1
+$
+OPT upwind 0.95 0.0005 Cf.csv 9.81 1025
+$
+Break 1
+$
+Overtop 1200
+$
+$$---------------------------------------------------------------
+$                           The keys and values are explained here
+$$---------------------------------------------------------------
+$ the first word of a line must be the key and follwed the values in the order specified with spaces in between. 
+$ the keys are case sensitive!!!!!
+$$---------------------------------------------------------------
+$                           KEY  :: mode                -- sets the mode of the problem
+$$---------------------------------------------------------------
+$$    									IMPLEMENTATION EXAMPLE
+$$ 										mode 1D
+$ mode 1D or 2D specifying the number of dimensions of the problem
+$$---------------------------------------------------------------
+$                           KEY  :: wave			-- sets the wave input
+$$---------------------------------------------------------------
+$$    									IMPLEMENTATION EXAMPLE
+$$ 										wave 0.5 33
+$ options  order 
+$ 1) wave amplitude
+$ 2) time period
+$
+$$---------------------------------------------------------------
+$                           KEY  :: cgrid			-- sets the computational grid
+$$---------------------------------------------------------------
+$$    									IMPLEMENTATION EXAMPLE
+$$ 										cgrid 1700 0.2 0
+$ computational ===> cgrid grid Lx dx start_x (1D mode)
+$ computational ===> cgrid grid Lx dx start_x Ly dy start_y(2D mode)
+$
+$$---------------------------------------------------------------
+$                           KEY  :: sim_time			-- sets the total simultaion time and other time related parameters
+$$---------------------------------------------------------------
+$$    									IMPLEMENTATION EXAMPLE
+$$ 										sim_time 300 0.7 2 
+$ options  order 
+$ 1) total time
+$ 2) CFL number ensure it's less than 0.75. The program won't run otherwise
+$ 3) write interval for saving outputs
+$
+$$---------------------------------------------------------------
+$                           KEY  :: bottom			-- sets the bottom bathemetry
+$$---------------------------------------------------------------
+$$    									IMPLEMENTATION EXAMPLE
+$$ 										bottom d.csv 0.025 O X.csv Y.csv
+$ options  order 
+$ 1) file name for bathemetry (depth values should be in a CSV file with rows for X and cols for y(if 2D) and just in one line for(1D).)
+$ 2) exit BC O for open and C for closed
+$ 3) X.csv for x values of the bottom
+$ 4) Y.csv for y values of the bottom
+$
+$$---------------------------------------------------------------
+$                           KEY  :: OPT
+$$---------------------------------------------------------------
+$$    									IMPLEMENTATION EXAMPLE
+$$ 										OPT upwind 0.9 0.00005 Cf.csv 9.81 1025
+$ options  order 
+$ 1) Z_opt - mean or max or upwind
+$ 2) flux_weight for flux calculation
+$ 3) depth threshold
+$ 4) provide C_f File following manning formulation. This will be interpolated just like bathemetry.(C_f = g n^2 / (h^(1/3)) ) 
+$ 5) g = 9.81 # accelration due to gravity
+$ 6) rho = 1025 # density

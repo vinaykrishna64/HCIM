@@ -1,0 +1,88 @@
+##################################################
+started execution at		 ::2020-08-19 20:45:50.832444
+##################################################
+Hybrid Coastal Inundation Model
+Author: Vinay krishna
+##################################################
+
+
+##################################################
+		 INPUTS PROVIDED  		
+
+\--------------------------------------------------//
+
+wave type  	::Linear
+wave amplitude	::0.5m	<--->	wave period	::10.0s
+If spectrum was selected, these will be significant values
+
+\--------------------------------------------------//
+
+Breaking 	::	 YES
+ad hoc eddy viscocity using the smagorinsky model with Cs =0.01 will be employed
+current model does not provide any control over breaking criteria to the user
+
+\--------------------------------------------------//
+
+X_file 	::X.csv
+d_file 	::MATLAB_GENERATED.csv
+Cf_file 	::Cf.csv
+
+\--------------------------------------------------//
+
+g 	::9.81
+rho 	::1025.0
+depth interpolation mode 	::upwind
+depth_threshold 	::0.0005m
+flux_weight 	::0.95
+
+\--------------------------------------------------//
+
+Time to simulate 	::1200.0s
+CFL 	::0.7
+Outputs write interval 	::1.0s
+
+\--------------------------------------------------//
+
+exit boundary condition	::	 Closed
+
+\--------------------------------------------------//
+
+mode 	::1D
+Lx 	::1500.0m
+dx 	::0.2m
+starting x 	::0.0m
+Overtopping point 	::1200.0m
+
+\--------------------------------------------------//
+
+--->	 outputs folder is created
+--->	 Grid matrices Initialized
+--->	 Depth and Cf interpolated
+--->	 Intial water height are set
+--->	 Model is being simulated
+--->	 initial del_t set as --->	0.014134925765692261
+--->	 Outputs written for simulation time	0
+--->	 del_t changed to 0.01413492576515098	 !!
+--->		SIMULATION TIME		0.01413492576515098
+--->	 del_t changed to 0.014134925744685146	 !!
+--->		SIMULATION TIME		0.028269851509836127
+--->	 del_t changed to 0.014134925593446555	 !!
+--->		SIMULATION TIME		0.04240477710328268
+--->	 del_t changed to 0.014134925157585371	 !!
+--->		SIMULATION TIME		0.05653970226086805
+--->	 del_t changed to 0.014134924273346993	 !!
+--->		SIMULATION TIME		0.07067462653421504
+--->	 del_t changed to 0.014134922777332389	 !!
+--->		SIMULATION TIME		0.08480954931154742
+--->	 del_t changed to 0.014134920509479938	 !!
+--->		SIMULATION TIME		0.09894446982102736
+--->	 del_t changed to 0.0141349173138916	 !!
+--->		SIMULATION TIME		0.11307938713491897
+--->	 del_t changed to 0.014134913039021011	 !!
+--->		SIMULATION TIME		0.12721430017393998
+--->	 del_t changed to 0.014134907537672952	 !!
+--->		SIMULATION TIME		0.14134920771161294
+--->	 del_t changed to 0.01413490066694748	 !!
+--->		SIMULATION TIME		0.15548410837856041
+--->	 del_t changed to 0.01413489228816809	 !!
+--->		SIMULATION TIME		0.1696190006667285
