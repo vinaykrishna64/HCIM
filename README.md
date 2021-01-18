@@ -1,9 +1,10 @@
 # HCIM
 Hybrid Coastal Inundation Model
-Developed for my MSc thesis submitted in fulfilment of the requirements for the MSc and the Diploma of Imperial College London.
+
+This model is developed for my MSc thesis submitted in fulfilment of the requirements for the MSc and the Diploma of Imperial College London.
 
 
-                                                                  Abstract
+-----------------Abstract-----------------------------
                                                                   
                                                                  
 A large part of the world population resides in coastal regions. The rise in sea levels due to global warming and the increase in the frequency of extreme events in coastal
